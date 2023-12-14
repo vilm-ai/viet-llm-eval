@@ -1,7 +1,7 @@
 task: vmlu
 dataset_path: vilm/vmlu_val # a copy of `cais/mmlu` with no auxiliary_train split
 test_split: validation
-fewshot_split: dev
+fewshot_split: validation
 fewshot_config:
   sampler: first_n
 # description": "The following are multiple choice questions (with answers) about ."
