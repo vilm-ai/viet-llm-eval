@@ -1,4 +1,4 @@
-task: vmlu_vi
+task: vmlu
 dataset_path: vilm/vmlu_val # a copy of `cais/mmlu` with no auxiliary_train split
 test_split: validation
 fewshot_split: dev
@@ -6,7 +6,11 @@ fewshot_config:
   sampler: first_n
 # description": "The following are multiple choice questions (with answers) about ."
 output_type: multiple_choice
-doc_to_text: "The following are multiple choice questions (with answers) about .\n\n{{question.strip()}}\nA. {{choices[0]}}\nB. {{choices[1]}}\nC. {{choices[2]}}\nD. {{choices[3]}}\nAnswer:"
+doc_to_text: "TThe following are multiple choice questions (with answers).\n\n{{ question.strip() }}
+{% for choice in choices %}
+{{ choice }}
+{% endfor %}
+Answer:"
 doc_to_choice: ["A", "B", "C", "D"]
 doc_to_target: answer
 metric_list:
