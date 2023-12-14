@@ -6,7 +6,7 @@ fewshot_config:
   sampler: first_n
 # description": "The following are multiple choice questions (with answers) about ."
 output_type: multiple_choice
-doc_to_text: "TThe following are multiple choice questions (with answers).\n\n{{ question.strip() }}
+doc_to_text: "The following are multiple choice questions (with answers).\n\n{{ question.strip() }}
 {% for choice in choices %}
 {{ choice }}
 {% endfor %}
